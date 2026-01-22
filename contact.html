@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - MediNova HealthTech</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f9ff;
+}
+header{
+    background:linear-gradient(90deg,#2c655f,#356f49);
+    padding:18px 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+header h1{
+    color:white;
+    font-size:26px;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    margin-left:30px;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    width:0;
+    height:2px;
+    background:#e0f2fe;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.hero{
+    background:linear-gradient(135deg,#1d976c,#93f9b9);
+    color:#fff;
+    padding:70px 20px;
+    text-align:center;
+}
+.hero h1{font-size:44px;}
+
+.section{
+    padding:60px 10%;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+.info, .form{
+    flex:1;
+    min-width:300px;
+}
+.info h2{
+    color:#0f766e;
+    margin-bottom:20px;
+}
+.info p{
+    margin-bottom:15px;
+    font-size:16px;
+    color:#444;
+}
+
+form{
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+button{
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+    color:#fff;
+    border:none;
+    padding:14px;
+    width:100%;
+    font-size:16px;
+    border-radius:30px;
+    cursor:pointer;
+}
+button:hover{
+    opacity:.9;
+}
+
+footer{
+    background:#0f5f4a;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+    <header>
+    <h1>MediNova</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solution.html">Solutions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Let’s build the future of healthcare together.</p>
+</section>
+
+<section class="section">
+
+<div class="info">
+    <h2>Get In Touch</h2>
+    <p><strong>📍 Address:</strong> MediNova HealthTech Pvt Ltd,<br>
+       Tech Park Road, Whitefield,<br>
+       Bengaluru – 560066, India</p>
+
+    <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+    <p><strong>☎ Support:</strong> +91 91234 56789</p>
+    <p><strong>📧 Email:</strong> contact@medinovahealthtech.com</p>
+    <p><strong>⏰ Working Hours:</strong> Mon – Fri, 9:00 AM – 6:00 PM</p>
+</div>
+
+<div class="form">
+    <form onsubmit="submitForm(event)">
+        <h2 style="color:#11998e;margin-bottom:20px;">Send Us a Message</h2>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+</section>
+
+<footer>
+    <p>© 2026 MediNova HealthTech. All Rights Reserved.</p>
+</footer>
+
+<script>
+function submitForm(e){
+    e.preventDefault();
+    alert("🎉 Thank you for contacting MediNova HealthTech!\n\nYour message has been successfully submitted.\nOur team will reach out to you shortly. 💙");
+}
+</script>
+
+</body>
+</html>

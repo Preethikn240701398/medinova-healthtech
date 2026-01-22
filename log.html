@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login – MediNova HealthTech</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f766e,#6d28d9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* COMMON CONTAINER */
+.login-container,
+.signup-container,
+.forgot-container{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.25);
+    width:100%;
+    max-width:420px;
+}
+
+/* LOGO */
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo h1{
+    color:#0f766e;
+    font-size:28px;
+}
+
+.logo p{
+    color:#666;
+    font-size:14px;
+}
+
+/* FORM */
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    color:#333;
+    font-weight:500;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:14px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#0f766e;
+}
+
+.checkbox-label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    color:#333;
+}
+
+input[type="checkbox"]{
+    width:auto;
+}
+
+/* ACTIONS */
+.remember-forgot{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.remember-forgot a,
+.signup-link a{
+    color:#6d28d9;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    background:linear-gradient(135deg,#0f766e,#6d28d9);
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+/* LINK */
+.signup-link{
+    text-align:center;
+    margin-top:20px;
+    font-size:14px;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div class="login-container" id="loginContainer">
+    <div class="logo">
+        <h1>MediNova</h1>
+        <p>Healthcare Technology Platform</p>
+    </div>
+
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="password" required>
+    </div>
+
+    <div class="form-group checkbox-label">
+        <input type="checkbox" id="showPassword"> Show Password
+    </div>
+
+    <div class="remember-forgot">
+        <label class="checkbox-label">
+            <input type="checkbox"> Remember me
+        </label>
+        <a href="#" onclick="showForgot()">Forgot Password?</a>
+    </div>
+
+    <button onclick="login()">Login</button>
+
+    <div class="signup-link">
+        Don’t have an account?
+        <a href="#" onclick="showSignup()">Create Account</a>
+    </div>
+</div>
+
+<!-- SIGNUP -->
+<div class="signup-container" id="signupContainer" style="display:none;">
+    <div class="logo">
+        <h1>MediNova</h1>
+        <p>Create Account</p>
+    </div>
+
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="username" required>
+    </div>
+
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="signupEmail" required>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="signupPassword" required>
+    </div>
+
+    <div class="form-group checkbox-label">
+        <input type="checkbox" id="signupShowPassword"> Show Password
+    </div>
+
+    <button onclick="signup()">Register</button>
+
+    <div class="signup-link">
+        Already have an account?
+        <a href="#" onclick="showLogin()">Login</a>
+    </div>
+</div>
+
+<!-- FORGOT -->
+<div class="forgot-container" id="forgotContainer" style="display:none;">
+    <div class="logo">
+        <h1>MediNova</h1>
+        <p>Reset Password</p>
+    </div>
+
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="resetEmail" required>
+    </div>
+
+    <div class="form-group">
+        <label>New Password</label>
+        <input type="password" id="newPassword" required>
+    </div>
+
+    <button onclick="resetPassword()">Reset Password</button>
+
+    <div class="signup-link">
+        Remembered your password?
+        <a href="#" onclick="showLogin()">Login</a>
+    </div>
+</div>
+
+<script>
+/* SHOW PASSWORD */
+showPassword.onchange = () =>
+    password.type = showPassword.checked ? "text" : "password";
+
+signupShowPassword.onchange = () =>
+    signupPassword.type = signupShowPassword.checked ? "text" : "password";
+
+/* PAGE SWITCH */
+function showSignup(){
+    loginContainer.style.display="none";
+    signupContainer.style.display="block";
+    forgotContainer.style.display="none";
+}
+
+function showLogin(){
+    loginContainer.style.display="block";
+    signupContainer.style.display="none";
+    forgotContainer.style.display="none";
+}
+
+function showForgot(){
+    loginContainer.style.display="none";
+    signupContainer.style.display="none";
+    forgotContainer.style.display="block";
+}
+
+/* LOGIN */
+function login(){
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(u => u.email === email.value && u.password === password.value);
+
+    if(user){
+        window.location.href="index.html";
+    } else {
+        alert("Invalid credentials. Please register first.");
+    }
+}
+
+/* SIGNUP */
+function signup(){
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    if(users.find(u => u.email === signupEmail.value)){
+        alert("Email already registered.");
+        return;
+    }
+
+    users.push({
+        name: username.value,
+        email: signupEmail.value,
+        password: signupPassword.value
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("Registration successful. Please login.");
+    showLogin();
+}
+
+/* RESET */
+function resetPassword(){
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const index = users.findIndex(u => u.email === resetEmail.value);
+
+    if(index !== -1){
+        users[index].password = newPassword.value;
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("Password updated successfully.");
+    } else {
+        alert("Account not found. Please register.");
+    }
+    showLogin();
+}
+</script>
+
+</body>
+</html>

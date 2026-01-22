@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MediNova HealthTech</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f9ff;
+            color: #333;
+        }
+        header{
+    background:linear-gradient(90deg,#2c655f,#356f49);
+    padding:18px 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+header h1{
+    color:white;
+    font-size:26px;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    margin-left:30px;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    width:0;
+    height:2px;
+    background:#e0f2fe;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+nav a:hover::after{
+    width:100%;
+}
+
+        /* HEADER */
+        .hero {
+            background: linear-gradient(135deg, #1d976c, #93f9b9);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* SECTION */
+        .section {
+            padding: 70px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #1d976c;
+        }
+
+        /* FLEX CONTENT */
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .content img {
+            width: 45%;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .content-text {
+            width: 55%;
+        }
+
+        .content-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #0f5f4a;
+        }
+
+        .content-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* VALUES */
+        .values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .value-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .value-box:hover {
+            transform: translateY(-8px);
+        }
+
+        .value-box h4 {
+            color: #1d976c;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .value-box p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f5f4a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    
+<header>
+    <h1>MediNova</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solution.html">Solutions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>About MediNova HealthTech</h1>
+        <p>
+            Innovating healthcare through intelligent technology, secure digital systems,
+            and patient-centric solutions.
+        </p>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section class="section">
+        <h2 class="section-title">Who We Are</h2>
+
+        <div class="content">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlfcUxRzxKmc9pYuD6N7OAZJGm8NMk5yVyQg&s" alt="Healthcare Technology">
+            <div class="content-text">
+                <h3>Technology Meets Healthcare</h3>
+                <p>
+                    MediNova HealthTech is a forward-thinking healthcare technology company
+                    dedicated to transforming medical services using digital innovation.
+                    We build intelligent platforms that empower hospitals, clinics,
+                    laboratories, and healthcare professionals to deliver better patient care.
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-text">
+                <h3>Our Mission</h3>
+                <p>
+                    Our mission is to simplify healthcare operations, enhance clinical decision-making,
+                    and improve patient outcomes through secure, scalable, and smart digital solutions.
+                    We believe technology should support caregivers—not complicate their work.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309" alt="Doctors and Technology">
+        </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="section">
+        <h2 class="section-title">What We Do</h2>
+
+        <div class="content">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQif9V74eAzEyuxSjyIIsMWj6Bs4Nh_P-PJvw&s" alt="HealthTech Solutions">
+            <div class="content-text">
+                <h3>Smart Healthcare Solutions</h3>
+                <p>
+                    We develop Hospital Management Systems, Electronic Health Records (EHR),
+                    Telemedicine platforms, AI-powered diagnostics, and cloud-based healthcare applications.
+                    Our solutions are compliant with healthcare standards and designed for scalability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section class="section">
+        <h2 class="section-title">Our Core Values</h2>
+
+        <div class="values">
+            <div class="value-box">
+                <h4>Innovation</h4>
+                <p>
+                    We constantly innovate to bring cutting-edge technologies into healthcare systems.
+                </p>
+            </div>
+
+            <div class="value-box">
+                <h4>Patient-Centric</h4>
+                <p>
+                    Every solution we build prioritizes patient safety, privacy, and experience.
+                </p>
+            </div>
+
+            <div class="value-box">
+                <h4>Security & Compliance</h4>
+                <p>
+                    We follow industry standards to ensure data protection and regulatory compliance.
+                </p>
+            </div>
+
+            <div class="value-box">
+                <h4>Reliability</h4>
+                <p>
+                    Healthcare systems demand trust—our platforms are built for reliability and uptime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 MediNova HealthTech. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronic Health Records | MediNova HealthTech</title>
+
+<style>
+    /* BACK BUTTON */
+.back-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    background:white;
+    color:#2563eb;
+    padding:10px 18px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:0.3s;
+    z-index:1000;
+}
+
+.back-btn:hover{
+    background:#1e40af;
+    color:white;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f9ff;
+    color:#333;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#0ea5e9,#6366f1);
+    color:#fff;
+    padding:90px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:900px;
+    margin:auto;
+}
+
+/* SECTION */
+.section{
+    padding:80px 10%;
+}
+
+.section h2{
+    text-align:center;
+    font-size:38px;
+    color:#1e40af;
+    margin-bottom:50px;
+}
+
+/* FLEX */
+.flex{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    margin-bottom:70px;
+    flex-wrap:wrap;
+}
+
+.flex img{
+    width:45%;
+    min-width:280px;
+    border-radius:18px;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.flex div{
+    width:50%;
+    min-width:280px;
+}
+
+.flex h3{
+    color:#2563eb;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.flex p{
+    line-height:1.8;
+    font-size:16px;
+    color:#555;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.feature{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-10px);
+}
+
+.feature h4{
+    color:#0ea5e9;
+    margin-bottom:12px;
+    font-size:20px;
+}
+
+.feature p{
+    font-size:15px;
+    color:#555;
+    line-height:1.7;
+}
+
+/* SECURITY */
+.security{
+    background:linear-gradient(135deg,#1e3a8a,#2563eb);
+    color:white;
+    padding:80px 10%;
+    text-align:center;
+}
+
+.security h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.security p{
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(135deg,#2563eb,#22c55e);
+    color:white;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.cta a{
+    background:white;
+    color:#2563eb;
+    padding:15px 35px;
+    border-radius:30px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.cta a:hover{
+    background:#2563eb;
+    color:white;
+    border:2px solid white;
+}
+
+/* FOOTER */
+footer{
+    background:#0f5f4a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+    <a href="solution.html" class="back-btn">← Back to Solutions</a>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Electronic Health Records (EHR)</h1>
+    <p>
+        Secure, centralized, and intelligent digital health records designed
+        to improve patient care, collaboration, and clinical efficiency.
+    </p>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+    <div class="flex">
+        <img src="https://www.ominext.com/storage/files/1/[2.1][Design]%20Health%20informatics%20-%20PPT%20EDIT%202.4.jpg" alt="Electronic Health Records">
+        <div>
+            <h3>Centralized Patient Information</h3>
+            <p>
+                MediNova’s EHR system provides a single, unified view of patient medical records,
+                ensuring accurate, up-to-date information is available to authorized healthcare
+                professionals anytime, anywhere.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div>
+            <h3>Improved Collaboration & Continuity of Care</h3>
+            <p>
+                Our EHR platform enables seamless communication between doctors, nurses,
+                laboratories, and specialists—reducing errors and improving clinical outcomes.
+            </p>
+        </div>
+        <img src="https://img.freepik.com/free-photo/male-doctor-showing-human-skeleton-illustration-digital-tablet-senior-woman-checkup-examination-physician-patient-looking-osteopathy-diagnosis-with-bones-spinal-cord_482257-43213.jpg?semt=ais_hybrid&w=740&q=80" alt="Doctor Reviewing Patient Data">
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+    <h2>Core EHR Features</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <h4>Comprehensive Patient Records</h4>
+            <p>
+                Store demographics, medical history, diagnoses, allergies,
+                medications, lab results, and imaging reports securely.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Clinical Documentation</h4>
+            <p>
+                Structured and customizable clinical notes, progress reports,
+                and discharge summaries.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>E-Prescriptions</h4>
+            <p>
+                Digital prescriptions integrated with pharmacies to reduce errors
+                and improve medication adherence.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Interoperability</h4>
+            <p>
+                Seamless data exchange with laboratory systems, imaging centers,
+                and external healthcare providers.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Patient Portal</h4>
+            <p>
+                Secure patient access to medical records, test results,
+                prescriptions, and follow-up instructions.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Audit Trails & Access Control</h4>
+            <p>
+                Role-based access and detailed logs to ensure accountability
+                and data integrity.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Modernize Patient Records with MediNova EHR</h2>
+    <p>
+        Enable smarter, safer, and more connected healthcare with our advanced
+        Electronic Health Records solution.
+    </p>
+    <a href="https://youtu.be/SlQ60KaLeHg?si=KYx9z2moPrVg-ihz">Watch video</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 MediNova HealthTech. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

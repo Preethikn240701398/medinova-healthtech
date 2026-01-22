@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MediNova HealthTech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#f8fbff,#eef7f6);
+    color:#2b2b2b;
+}
+
+/* NAVBAR */
+header{
+    background:linear-gradient(90deg,#2c655f,#356f49);
+    padding:18px 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+header h1{
+    color:white;
+    font-size:26px;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    margin-left:30px;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    width:0;
+    height:2px;
+    background:#e0f2fe;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:90px 70px;
+    background:
+        radial-gradient(circle at top left,#c7f9cc,transparent),
+        radial-gradient(circle at bottom right,#ddd6fe,transparent);
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h2{
+    font-size:50px;
+    background:linear-gradient(90deg,#0f766e,#6d28d9);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:35px;
+}
+
+.hero-text button{
+    padding:14px 34px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    margin-right:15px;
+}
+
+.btn-primary{
+    background:linear-gradient(90deg,#22c55e,#0ea5e9);
+    color:white;
+}
+
+.btn-secondary{
+    background:white;
+    color:#0f766e;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero-img{
+    width:450px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero-img img{
+    width:100%;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+/* SERVICES */
+.services{
+    padding:90px 70px;
+    background:white;
+    text-align:center;
+}
+
+.services h2{
+    font-size:38px;
+    margin-bottom:15px;
+    color:#0f766e;
+}
+
+.services p{
+    max-width:750px;
+    margin:0 auto 60px;
+    color:#555;
+}
+
+.service-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.card{
+    padding:35px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(12px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:6px;
+    top:0;
+    left:0;
+    background:linear-gradient(90deg,#22c55e,#6d28d9);
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.02);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#2563eb;
+}
+
+.card p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* WHY US */
+.why-us{
+    padding:90px 70px;
+    background:linear-gradient(135deg,#ecfeff,#f0fdf4);
+}
+
+.why-us h2{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:60px;
+    color:#0f766e;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.why-box{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 15px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.why-box:hover{
+    background:linear-gradient(135deg,#22c55e,#38bdf8);
+    color:white;
+}
+
+.why-box h3{
+    margin-bottom:10px;
+}
+
+/* CTA */
+.cta{
+    padding:90px 70px;
+    text-align:center;
+    background:linear-gradient(90deg,#0f766e,#6d28d9);
+    color:white;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:25px;
+}
+
+.cta button{
+    padding:16px 40px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    background:white;
+    color:#0f766e;
+}
+
+/* FOOTER */
+footer{
+    background:#020617;
+    color:#cbd5f5;
+    text-align:center;
+    padding:22px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-img{
+        margin-top:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MediNova</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solution.html">Solutions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Transforming Healthcare Through Innovation</h2>
+        <p>
+            MediNova HealthTech delivers intelligent, secure, and scalable healthcare
+            platforms that empower clinicians and improve patient outcomes.
+        </p>
+        <a href="solution.html"><button class="btn-primary">Explore Solutions</button></a>
+        
+    </div>
+
+    <div class="hero-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png">
+    </div>
+</section>
+
+<section class="services">
+    <h2>Our Healthcare Solutions</h2>
+    <p>Smart digital systems designed for modern hospitals and healthcare providers.</p>
+
+    <div class="service-cards">
+        <div class="card">
+            <h3>Hospital Management</h3>
+            <p>Digitized operations for administration, billing, and clinical workflows.</p>
+        </div>
+
+        <div class="card">
+            <h3>EHR / EMR</h3>
+            <p>Secure, interoperable patient health record management systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>Telemedicine</h3>
+            <p>Remote care platforms connecting doctors and patients virtually.</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Diagnostics</h3>
+            <p>Advanced AI tools for predictive analytics and medical imaging.</p>
+        </div>
+    </div>
+</section>
+
+<section class="why-us">
+    <h2>Why Choose MediNova?</h2>
+
+    <div class="why-grid" >
+           <div class="why-box" onclick="goto('healthcare-expertise.html')">
+            <h3>Healthcare Expertise</h3>
+            <p>Built with deep understanding of clinical workflows.</p>
+        </div>
+
+        <div class="why-box" onclick="goto('secure-compliant.html')">
+            <h3>Secure & Compliant</h3>
+            <p>HIPAA & GDPR-ready healthcare solutions.</p>
+        </div>
+
+        <div class="why-box" onclick="goto('future-ready.html')">
+            <h3>Future-Ready</h3>
+            <p>Scalable cloud-based healthcare platforms.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Ready to Elevate Your Healthcare Systems?</h2>
+    <a href="contact.html"><button>Contact MediNova</button></a>
+</section>
+
+<footer>
+    © 2026 MediNova HealthTech. All Rights Reserved.
+</footer>
+
+</body>
+</html>
+<script>
+function goto(url) {
+    window.location.href = url;
+}
+</script>

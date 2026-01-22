@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - MediNova HealthTech</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f9ff;
+            color: #333;
+        }
+header{
+    background:linear-gradient(90deg,#2c655f,#356f49);
+    padding:18px 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+header h1{
+    color:white;
+    font-size:26px;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    margin-left:30px;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    width:0;
+    height:2px;
+    background:#e0f2fe;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* SECTION */
+        .section {
+            padding: 70px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #11998e;
+        }
+
+        /* SOLUTION CARDS */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .solution-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .solution-content {
+            padding: 25px;
+        }
+
+        .solution-content h3 {
+            color: #0f766e;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .solution-content p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #0f766e, #22c55e);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 14px 30px;
+            background: white;
+            color: #0f766e;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .cta a:hover {
+            background: #0f766e;
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f5f4a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <h1>MediNova</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solution.html">Solutions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Our Healthcare Solutions</h1>
+        <p>
+            Smart, secure, and scalable digital solutions designed to modernize healthcare delivery.
+        </p>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="section">
+        <h2 class="section-title">What We Offer</h2>
+
+        <div class="solutions-grid">
+
+            <div class="solution-card" onclick="func('hospital-management.html')">
+                <img src="https://shmsolutions.in/blog/wp-content/uploads/2025/06/Healthcare-professionals-collaborating-in-a-well-lit-hospital-corridor-emphasizing-teamwork-and-patient-care.jpg" alt="Hospital Management System">
+                <div class="solution-content">
+                    <h3>Hospital Management System</h3>
+                    <p>
+                        An integrated platform to manage patient records, appointments, billing,
+                        inventory, and hospital operations efficiently.
+                    </p>
+                </div>
+            </div>
+
+            <div class="solution-card" onclick="func('electronic-health.html')">
+                <img src="https://images.unsplash.com/photo-1576671081837-49000212a370" alt="Electronic Health Records">
+                <div class="solution-content">
+                    <h3>Electronic Health Records (EHR)</h3>
+                    <p>
+                        Secure and centralized digital health records that improve accessibility,
+                        collaboration, and continuity of patient care.
+                    </p>
+                </div>
+            </div>
+
+            <div class="solution-card" onclick="func('Telemedicine.html')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Irm8NkG64OPTwDZ3WLwsnVgql73BE7wsZQ&s" alt="Telemedicine">
+                <div class="solution-content">
+                    <h3>Telemedicine Solutions</h3>
+                    <p>
+                        Virtual consultation platforms enabling patients and doctors to connect
+                        remotely with secure video and data sharing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="solution-card" onclick="func('AI-Diagnostics.html')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXlnMh4eHW55-J-mflCd2DgBZRP7980kkzew&s" alt="AI Diagnostics">   
+                <div class="solution-content">
+                    <h3>AI-Powered Diagnostics</h3>
+                    <p>
+                        Advanced AI algorithms to assist clinicians in faster and more accurate
+                        diagnosis and treatment planning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="solution-card" onclick="func('Remote-Patient-Monitoring.html')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvtxAfVM7llRYkmen8aC5fubCu6iN0zPHDSg&s" alt="Remote Patient Monitoring">        
+                <div class="solution-content">
+                    <h3>Remote Patient Monitoring</h3>
+                    <p>
+                        IoT-based monitoring solutions that track patient vitals in real time,
+                        improving chronic disease management.
+                    </p>
+                </div>
+            </div>
+
+            <div class="solution-card" onclick="func('Healthcare-Analytics.html')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7itHc4JwccwLjQMHXih6oHson6RmqsgLQDQ&s" alt="Healthcare Analytics">     
+                <div class="solution-content">
+                    <h3>Healthcare Data Analytics</h3>
+                    <p>
+                        Actionable insights from healthcare data to support decision-making,
+                        optimize workflows, and improve outcomes.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Ready to Transform Healthcare?</h2>
+        <p>Partner with MediNova HealthTech to build the future of digital healthcare.</p>
+        <a href="contact.html">Contact Us</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 MediNova HealthTech. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+<script>
+function func(page) {
+    window.location.href = page;
+}       
+</script>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remote Patient Monitoring | MediNova HealthTech</title>
+
+<style>
+    /* BACK BUTTON */
+.back-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    background:white;
+    color:#2563eb;
+    padding:10px 18px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:0.3s;
+    z-index:1000;
+}
+
+.back-btn:hover{
+    background:#1e40af;
+    color:white;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#f6fbff;
+    color:#333;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#065f46,#22c55e);
+    color:white;
+    padding:95px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:900px;
+    margin:auto;
+}
+
+/* SECTION */
+.section{
+    padding:80px 10%;
+}
+
+.section h2{
+    text-align:center;
+    font-size:38px;
+    color:#047857;
+    margin-bottom:50px;
+}
+
+/* FLEX */
+.flex{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    margin-bottom:70px;
+    flex-wrap:wrap;
+}
+
+.flex img{
+    width:45%;
+    min-width:280px;
+    border-radius:18px;
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+.flex div{
+    width:50%;
+    min-width:280px;
+}
+
+.flex h3{
+    color:#16a34a;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.flex p{
+    line-height:1.8;
+    font-size:16px;
+    color:#555;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.feature{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-10px);
+}
+
+.feature h4{
+    color:#16a34a;
+    margin-bottom:12px;
+    font-size:20px;
+}
+
+.feature p{
+    font-size:15px;
+    color:#555;
+    line-height:1.7;
+}
+
+/* VITALS */
+.vitals{
+    background:linear-gradient(135deg,#ecfdf5,#d1fae5);
+    padding:80px 10%;
+}
+
+.vitals h2{
+    text-align:center;
+    font-size:36px;
+    color:#065f46;
+    margin-bottom:45px;
+}
+
+.vital-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.vital{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.vital h4{
+    margin-bottom:10px;
+    color:#22c55e;
+}
+
+/* FLOW */
+.flow{
+    background:linear-gradient(135deg,#064e3b,#14532d);
+    color:white;
+    padding:80px 10%;
+}
+
+.flow h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+.flow-steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.step{
+    background:rgba(255,255,255,.12);
+    padding:25px;
+    border-radius:16px;
+}
+
+.step h4{
+    margin-bottom:10px;
+    color:#86efac;
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(135deg,#22c55e,#4ade80);
+    color:white;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.cta a{
+    background:white;
+    color:#16a34a;
+    padding:15px 35px;
+    border-radius:30px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.cta a:hover{
+    background:#16a34a;
+    color:white;
+    border:2px solid white;
+}
+
+/* FOOTER */
+footer{
+    background:#064e3b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+    <a href="solution.html" class="back-btn">← Back to Solutions</a>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Remote Patient Monitoring</h1>
+    <p>
+        IoT-powered real-time monitoring solutions that continuously track patient vitals,
+        enabling proactive care and better chronic disease management.
+    </p>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+    <div class="flex">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" alt="Remote Patient Monitoring">
+        <div>
+            <h3>Continuous Care Beyond Hospital Walls</h3>
+            <p>
+                MediNova’s Remote Patient Monitoring (RPM) solution allows healthcare providers
+                to monitor patient health in real time using connected medical devices.
+                This enables early detection of health issues and reduces hospital readmissions.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div>
+            <h3>Ideal for Chronic Disease Management</h3>
+            <p>
+                RPM is especially effective for managing chronic conditions such as diabetes,
+                hypertension, cardiac disorders, and respiratory diseases by tracking vital signs
+                and alerting clinicians to abnormalities.
+            </p>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzfHnyi_IJ6qs6Z5MKZd1RP738ea87DwKQCQ&s" alt="IoT Healthcare Devices">
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+    <h2>Core Features</h2>
+
+    <div class="features">
+        <div class="feature">
+            <h4>IoT-Enabled Medical Devices</h4>
+            <p>Integration with wearable and home-based IoT devices for seamless data capture.</p>
+        </div>
+
+        <div class="feature">
+            <h4>Real-Time Data Transmission</h4>
+            <p>Continuous streaming of patient vitals to clinicians and care teams.</p>
+        </div>
+
+        <div class="feature">
+            <h4>Automated Alerts & Notifications</h4>
+            <p>Instant alerts when vitals cross predefined thresholds.</p>
+        </div>
+
+        <div class="feature">
+            <h4>Chronic Care Monitoring</h4>
+            <p>Long-term monitoring for patients with chronic illnesses.</p>
+        </div>
+
+        <div class="feature">
+            <h4>EHR & Telemedicine Integration</h4>
+            <p>RPM data integrated with EHR and virtual consultation platforms.</p>
+        </div>
+
+        <div class="feature">
+            <h4>Secure Cloud Storage</h4>
+            <p>Encrypted storage ensuring data privacy and compliance.</p>
+        </div>
+    </div>
+</section>
+
+<!-- VITALS -->
+<section class="vitals">
+    <h2>Vitals Monitored</h2>
+
+    <div class="vital-grid">
+        <div class="vital">
+            <h4>Heart Rate</h4>
+            <p>Continuous monitoring for cardiac health.</p>
+        </div>
+
+        <div class="vital">
+            <h4>Blood Pressure</h4>
+            <p>Early detection of hypertension risks.</p>
+        </div>
+
+        <div class="vital">
+            <h4>Blood Glucose</h4>
+            <p>Diabetes management and control.</p>
+        </div>
+
+        <div class="vital">
+            <h4>Oxygen Saturation</h4>
+            <p>Respiratory condition monitoring.</p>
+        </div>
+
+        <div class="vital">
+            <h4>Body Temperature</h4>
+            <p>Detection of infections or fever.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow">
+    <h2>How Remote Patient Monitoring Works</h2>
+
+    <div class="flow-steps">
+        <div class="step">
+            <h4>1. Device Setup</h4>
+            <p>IoT medical devices are provided to the patient.</p>
+        </div>
+
+        <div class="step">
+            <h4>2. Data Collection</h4>
+            <p>Vitals are captured continuously or periodically.</p>
+        </div>
+
+        <div class="step">
+            <h4>3. Cloud Processing</h4>
+            <p>Data is securely transmitted and analyzed in real time.</p>
+        </div>
+
+        <div class="step">
+            <h4>4. Clinical Intervention</h4>
+            <p>Doctors intervene early based on alerts and trends.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Transform Chronic Care with RPM</h2>
+    <p>
+        Enable proactive healthcare delivery and improve patient outcomes
+        with MediNova’s Remote Patient Monitoring solutions.
+    </p>
+    <a href="https://youtu.be/lTEYqH19ex8?si=MJpFtPBsXLiyxGVx">Watch video</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 MediNova HealthTech. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

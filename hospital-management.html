@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Management System | MediNova HealthTech</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f9ff;
+    color:#333;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#2563eb,#22c55e);
+    color:#fff;
+    padding:90px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:900px;
+    margin:auto;
+}
+
+/* SECTION */
+.section{
+    padding:80px 10%;
+}
+
+.section h2{
+    text-align:center;
+    font-size:38px;
+    color:#1e40af;
+    margin-bottom:50px;
+}
+
+/* FLEX */
+.flex{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    margin-bottom:70px;
+    flex-wrap:wrap;
+}
+
+.flex img{
+    width:45%;
+    min-width:280px;
+    border-radius:18px;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.flex div{
+    width:50%;
+    min-width:280px;
+}
+
+.flex h3{
+    color:#0f766e;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.flex p{
+    line-height:1.8;
+    font-size:16px;
+    color:#555;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.feature{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-10px);
+}
+
+.feature h4{
+    color:#2563eb;
+    margin-bottom:12px;
+    font-size:20px;
+}
+
+.feature p{
+    font-size:15px;
+    color:#555;
+    line-height:1.7;
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(135deg,#0f766e,#22c55e);
+    color:white;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.cta a{
+    background:white;
+    color:#0f766e;
+    padding:15px 35px;
+    border-radius:30px;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:16px;
+}
+
+.cta a:hover{
+    background:#0f766e;
+    color:white;
+    border:2px solid white;
+}
+
+/* FOOTER */
+footer{
+    background:#0f5f4a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+/* BACK BUTTON */
+.back-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    background:white;
+    color:#2563eb;
+    padding:10px 18px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:0.3s;
+    z-index:1000;
+}
+
+.back-btn:hover{
+    background:#1e40af;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+    <a href="solution.html" class="back-btn">← Back to Solutions</a>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Hospital Management System</h1>
+    <p>
+        A powerful, integrated digital platform designed to streamline hospital operations,
+        improve patient care, and enhance administrative efficiency.
+    </p>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+    <div class="flex">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStxlB0Qa0mJEWHHl16EfQKThJ4lsSLMGt5DQ&s" alt="Hospital Technology">
+        <div>
+            <h3>Smart & Centralized Hospital Operations</h3>
+            <p>
+                MediNova’s Hospital Management System (HMS) is an all-in-one digital solution
+                that automates clinical, administrative, and financial workflows.
+                It connects doctors, nurses, staff, and patients on a single secure platform.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div>
+            <h3>Patient-Centric Digital Experience</h3>
+            <p>
+                Our HMS ensures accurate patient records, quick appointment scheduling,
+                transparent billing, and seamless communication—resulting in improved
+                patient satisfaction and quality of care.
+            </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309" alt="Doctors Using Technology">
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+    <h2>Key Modules & Features</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <h4>Patient Management</h4>
+            <p>
+                Maintain complete digital patient records including history,
+                diagnoses, prescriptions, lab reports, and discharge summaries.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Appointment Scheduling</h4>
+            <p>
+                Online and offline appointment booking with real-time doctor availability
+                and automated reminders.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Billing & Payments</h4>
+            <p>
+                Automated billing system with insurance integration, invoices,
+                receipts, and financial reporting.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Inventory & Pharmacy</h4>
+            <p>
+                Track medicines, medical equipment, stock levels,
+                expiry dates, and supplier management.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Laboratory Management</h4>
+            <p>
+                Manage lab tests, results, reports, and doctor access
+                through secure digital workflows.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Staff & Doctor Management</h4>
+            <p>
+                Role-based access for doctors, nurses, and administrators,
+                ensuring security and accountability.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Reports & Analytics</h4>
+            <p>
+                Real-time dashboards and analytics for hospital performance,
+                revenue tracking, and patient insights.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h4>Security & Compliance</h4>
+            <p>
+                Data encryption, access control, audit logs,
+                and compliance with healthcare regulations.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Transform Your Hospital Digitally</h2>
+    <p>
+        Join leading healthcare providers who trust MediNova HealthTech
+        for secure and efficient hospital management solutions.
+    </p>
+    <a href="https://youtu.be/4iSElJn4490?si=CxNwM_GTlo2FXtkY">Watch video</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 MediNova HealthTech. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
